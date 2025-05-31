@@ -7,7 +7,7 @@ pygame.init()
 ANCHO = 1000
 ALTO = 900
 pantalla = pygame.display.set_mode([ANCHO, ALTO])
-pygame.display.set_caption('¡Ajedrez Pygame para Dos Jugadores!')
+pygame.display.set_caption('Ajedrez')
 fuente = pygame.font.Font('freesansbold.ttf', 20)
 fuente_intermedia = pygame.font.Font('freesansbold.ttf', 30)
 fuente_mediana = pygame.font.Font('freesansbold.ttf', 40)
@@ -18,11 +18,11 @@ fps = 60
 piezas_blancas = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
 posiciones_blancas = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
-                   (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+                    (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
 piezas_negras = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
 posiciones_negras = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7),
-                   (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
+                    (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
 piezas_capturadas_blancas = []
 piezas_capturadas_negras = []
 # 0 - turno blancas sin selección: 1-turno blancas con pieza seleccionada: 2- turno negras sin selección, 3 - turno negras con pieza seleccionada
@@ -68,10 +68,10 @@ peon_blanco = pygame.transform.scale(peon_blanco, (65, 65))
 peon_blanco_pequeno = pygame.transform.scale(peon_blanco, (45, 45))
 imagenes_blancas = [peon_blanco, reina_blanca, rey_blanco, caballo_blanco, torre_blanca, alfil_blanco]
 imagenes_blancas_pequenas = [peon_blanco_pequeno, reina_blanca_pequena, rey_blanco_pequeno, caballo_blanco_pequeno,
-                      torre_blanca_pequena, alfil_blanco_pequeno]
+                        torre_blanca_pequena, alfil_blanco_pequeno]
 imagenes_negras = [peon_negro, reina_negra, rey_negro, caballo_negro, torre_negra, alfil_negro]
 imagenes_negras_pequenas = [peon_negro_pequeno, reina_negra_pequena, rey_negro_pequeno, caballo_negro_pequeno,
-                      torre_negra_pequena, alfil_negro_pequeno]
+                        torre_negra_pequena, alfil_negro_pequeno]
 lista_piezas = ['peon', 'reina', 'rey', 'caballo', 'torre', 'alfil']
 # variables de jaque/contador de parpadeo
 contador = 0
@@ -92,7 +92,7 @@ def dibujar_tablero():
         pygame.draw.rect(pantalla, 'gold', [0, 800, ANCHO, 100], 5)
         pygame.draw.rect(pantalla, 'gold', [800, 0, 200, ALTO], 5)
         texto_estado = ['Blancas: ¡Selecciona una ficha!', 'Blancas: ¡Selecciona un destino!',
-                       'Negras: ¡Selecciona una ficha!', 'Negras: ¡Selecciona un destino!']
+                        'Negras: ¡Selecciona una ficha!', 'Negras: ¡Selecciona un destino!']
         pantalla.blit(fuente_grande.render(texto_estado[paso_turno], True, 'black'), (20, 820))
         for i in range(9):
             pygame.draw.line(pantalla, 'black', (0, 100 * i), (800, 100 * i), 2)
@@ -111,7 +111,7 @@ def dibujar_piezas():
         if paso_turno < 2:
             if seleccion == i:
                 pygame.draw.rect(pantalla, 'red', [posiciones_blancas[i][0] * 100 + 1, posiciones_blancas[i][1] * 100 + 1,
-                                                 100, 100], 2)
+                                                100, 100], 2)
 
     for i in range(len(piezas_negras)):
         indice = lista_piezas.index(piezas_negras[i])
@@ -122,7 +122,7 @@ def dibujar_piezas():
         if paso_turno >= 2:
             if seleccion == i:
                 pygame.draw.rect(pantalla, 'blue', [posiciones_negras[i][0] * 100 + 1, posiciones_negras[i][1] * 100 + 1,
-                                                  100, 100], 2)
+                                                    100, 100], 2)
 
 
 # función para verificar todas las opciones válidas de las piezas en el tablero
@@ -428,11 +428,11 @@ while ejecutar:
                 piezas_blancas = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
                 posiciones_blancas = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
-                                   (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+                                    (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
                 piezas_negras = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
                 posiciones_negras = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7),
-                                   (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
+                                    (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
                 piezas_capturadas_blancas = []
                 piezas_capturadas_negras = []
                 paso_turno = 0

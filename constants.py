@@ -14,11 +14,11 @@ fps = 60
 piezas_blancas = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
 posiciones_blancas = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
-                   (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+                    (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
 piezas_negras = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
 posiciones_negras = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7),
-                   (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
+                    (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
 piezas_capturadas_blancas = []
 piezas_capturadas_negras = []
 # 0 - turno blancas sin selección: 1-turno blancas con pieza seleccionada: 2- turno negras sin selección, 3 - turno negras con pieza seleccionada
@@ -65,15 +65,15 @@ peon_blanco_pequeno = pygame.transform.scale(peon_blanco, (45, 45))
 imagenes_blancas = [peon_blanco, reina_blanca, rey_blanco, caballo_blanco, torre_blanca, alfil_blanco]
 promociones_blancas = ['alfil', 'caballo', 'torre', 'reina']
 blancas_movidas = [False, False, False, False, False, False, False, False,
-               False, False, False, False, False, False, False, False]
+                False, False, False, False, False, False, False, False]
 imagenes_blancas_pequenas = [peon_blanco_pequeno, reina_blanca_pequena, rey_blanco_pequeno, caballo_blanco_pequeno,
-                      torre_blanca_pequena, alfil_blanco_pequeno]
+                        torre_blanca_pequena, alfil_blanco_pequeno]
 imagenes_negras = [peon_negro, reina_negra, rey_negro, caballo_negro, torre_negra, alfil_negro]
 imagenes_negras_pequenas = [peon_negro_pequeno, reina_negra_pequena, rey_negro_pequeno, caballo_negro_pequeno,
-                      torre_negra_pequena, alfil_negro_pequeno]
+                        torre_negra_pequena, alfil_negro_pequeno]
 promociones_negras = ['alfil', 'caballo', 'torre', 'reina']
 negras_movidas = [False, False, False, False, False, False, False, False,
-               False, False, False, False, False, False, False, False]
+                False, False, False, False, False, False, False, False]
 lista_piezas = ['peon', 'reina', 'rey', 'caballo', 'torre', 'alfil']
 # variables de jaque/contador de parpadeo
 contador = 0

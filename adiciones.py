@@ -23,7 +23,7 @@ def dibujar_tablero():
         pygame.draw.rect(pantalla, 'gold', [0, 800, ANCHO, 100], 5)
         pygame.draw.rect(pantalla, 'gold', [800, 0, 200, ALTO], 5)
         texto_estado = ['Blancas: ¡Selecciona una pieza para mover!', 'Blancas: ¡Selecciona un destino!',
-                       'Negras: ¡Selecciona una pieza para mover!', 'Negras: ¡Selecciona un destino!']
+                        'Negras: ¡Selecciona una pieza para mover!', 'Negras: ¡Selecciona un destino!']
         pantalla.blit(fuente_grande.render(texto_estado[paso_turno], True, 'black'), (20, 820))
         for i in range(9):
             pygame.draw.line(pantalla, 'black', (0, 100 * i), (800, 100 * i), 2)
@@ -46,7 +46,7 @@ def dibujar_piezas():
         if paso_turno < 2:
             if seleccion == i:
                 pygame.draw.rect(pantalla, 'red', [posiciones_blancas[i][0] * 100 + 1, posiciones_blancas[i][1] * 100 + 1,
-                                                 100, 100], 2)
+                                                    100, 100], 2)
 
     for i in range(len(piezas_negras)):
         indice = lista_piezas.index(piezas_negras[i])
@@ -57,7 +57,7 @@ def dibujar_piezas():
         if paso_turno >= 2:
             if seleccion == i:
                 pygame.draw.rect(pantalla, 'blue', [posiciones_negras[i][0] * 100 + 1, posiciones_negras[i][1] * 100 + 1,
-                                                  100, 100], 2)
+                                                    100, 100], 2)
 
 
 # función para verificar todas las opciones válidas de las piezas en el tablero
@@ -347,7 +347,7 @@ def verificar_enroque():
                 castillo = True
                 if posiciones_torre[i][0] > pos_rey[0]:
                     casillas_vacias = [(pos_rey[0] + 1, pos_rey[1]), (pos_rey[0] + 2, pos_rey[1]),
-                                     (pos_rey[0] + 3, pos_rey[1])]
+                                        (pos_rey[0] + 3, pos_rey[1])]
                 else:
                     casillas_vacias = [(pos_rey[0] - 1, pos_rey[1]), (pos_rey[0] - 2, pos_rey[1])]
                 for j in range(len(casillas_vacias)):
@@ -369,7 +369,7 @@ def verificar_enroque():
                 castillo = True
                 if posiciones_torre[i][0] > pos_rey[0]:
                     casillas_vacias = [(pos_rey[0] + 1, pos_rey[1]), (pos_rey[0] + 2, pos_rey[1]),
-                                     (pos_rey[0] + 3, pos_rey[1])]
+                                        (pos_rey[0] + 3, pos_rey[1])]
                 else:
                     casillas_vacias = [(pos_rey[0] - 1, pos_rey[1]), (pos_rey[0] - 2, pos_rey[1])]
                 for j in range(len(casillas_vacias)):
@@ -587,15 +587,15 @@ while ejecutar:
                 piezas_blancas = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
                 posiciones_blancas = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
-                                   (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+                                    (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
                 blancas_movidas = [False, False, False, False, False, False, False, False,
-                               False, False, False, False, False, False, False, False]
+                                False, False, False, False, False, False, False, False]
                 piezas_negras = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
                 posiciones_negras = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7),
-                                   (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
+                                    (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
                 negras_movidas = [False, False, False, False, False, False, False, False,
-                               False, False, False, False, False, False, False, False]
+                                False, False, False, False, False, False, False, False]
                 piezas_capturadas_blancas = []
                 piezas_capturadas_negras = []
                 paso_turno = 0
