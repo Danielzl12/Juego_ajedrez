@@ -1,12 +1,12 @@
-# ¡ajedrez de dos jugadores en python con Pygame!
+
 # parte uno, configurar variables, imágenes y bucle del juego
 
 import pygame
 
 pygame.init()
-ANCHO = 1000
-ALTO = 900
-pantalla = pygame.display.set_mode([ANCHO, ALTO])
+ancho = 1000
+alto = 900
+pantalla = pygame.display.set_mode([ancho, alto])
 pygame.display.set_caption('Ajedrez')
 fuente = pygame.font.Font('freesansbold.ttf', 20)
 fuente_intermedia = pygame.font.Font('freesansbold.ttf', 30)
@@ -88,9 +88,9 @@ def dibujar_tablero():
             pygame.draw.rect(pantalla, 'light gray', [600 - (columna * 200), fila * 100, 100, 100])
         else:
             pygame.draw.rect(pantalla, 'light gray', [700 - (columna * 200), fila * 100, 100, 100])
-        pygame.draw.rect(pantalla, 'gray', [0, 800, ANCHO, 100])
-        pygame.draw.rect(pantalla, 'gold', [0, 800, ANCHO, 100], 5)
-        pygame.draw.rect(pantalla, 'gold', [800, 0, 200, ALTO], 5)
+        pygame.draw.rect(pantalla, 'gray', [0, 800, ancho, 100])
+        pygame.draw.rect(pantalla, 'gold', [0, 800, ancho, 100], 5)
+        pygame.draw.rect(pantalla, 'gold', [800, 0, 200, alto], 5)
         texto_estado = ['Blancas: ¡Selecciona una ficha!', 'Blancas: ¡Selecciona un destino!',
                         'Negras: ¡Selecciona una ficha!', 'Negras: ¡Selecciona un destino!']
         pantalla.blit(fuente_mediana.render(texto_estado[paso_turno], True, 'black'), (20, 820))
