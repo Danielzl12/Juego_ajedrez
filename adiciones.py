@@ -1,8 +1,5 @@
-# ¡ajedrez de dos jugadores en python con Pygame!
-# verificación de doble espacio de peón
-# enroque
-# captura al paso
-# promoción de peón
+
+
 
 import pygame
 from constants import *
