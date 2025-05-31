@@ -93,7 +93,7 @@ def dibujar_tablero():
         pygame.draw.rect(pantalla, 'gold', [800, 0, 200, ALTO], 5)
         texto_estado = ['Blancas: ¡Selecciona una ficha!', 'Blancas: ¡Selecciona un destino!',
                         'Negras: ¡Selecciona una ficha!', 'Negras: ¡Selecciona un destino!']
-        pantalla.blit(fuente_grande.render(texto_estado[paso_turno], True, 'black'), (20, 820))
+        pantalla.blit(fuente_mediana.render(texto_estado[paso_turno], True, 'black'), (20, 820))
         for i in range(9):
             pygame.draw.line(pantalla, 'black', (0, 100 * i), (800, 100 * i), 2)
             pygame.draw.line(pantalla, 'black', (100 * i, 0), (100 * i, 800), 2)
@@ -349,7 +349,7 @@ def dibujar_jaque():
 
 def dibujar_fin_juego():
     pygame.draw.rect(pantalla, 'black', [200, 200, 400, 70])
-    pantalla.blit(fuente.render(f'¡{ganador} ganó el juego!', True, 'white'), (210, 210))
+    pantalla.blit(fuente.render(f'¡{ganador} Ganó el juego!', True, 'white'), (210, 210))
     pantalla.blit(fuente.render(f'¡Presiona ENTER para reiniciar!', True, 'white'), (210, 240))
 
 
@@ -381,7 +381,7 @@ while ejecutar:
             coords_click = (coord_x, coord_y)
             if paso_turno <= 1:
                 if coords_click == (8, 8) or coords_click == (9, 8):
-                    ganador = 'negras'
+                    ganador = 'Negras'
                 if coords_click in posiciones_blancas:
                     seleccion = posiciones_blancas.index(coords_click)
                     if paso_turno == 0:
@@ -392,7 +392,7 @@ while ejecutar:
                         pieza_negra = posiciones_negras.index(coords_click)
                         piezas_capturadas_blancas.append(piezas_negras[pieza_negra])
                         if piezas_negras[pieza_negra] == 'rey':
-                            ganador = 'blancas'
+                            ganador = 'Blancas'
                         piezas_negras.pop(pieza_negra)
                         posiciones_negras.pop(pieza_negra)
                     opciones_negras = verificar_opciones(piezas_negras, posiciones_negras, 'black')
@@ -402,7 +402,7 @@ while ejecutar:
                     movimientos_validos = []
             if paso_turno > 1:
                 if coords_click == (8, 8) or coords_click == (9, 8):
-                    ganador = 'blancas'
+                    ganador = 'Blancas'
                 if coords_click in posiciones_negras:
                     seleccion = posiciones_negras.index(coords_click)
                     if paso_turno == 2:
@@ -413,7 +413,7 @@ while ejecutar:
                         pieza_blanca = posiciones_blancas.index(coords_click)
                         piezas_capturadas_negras.append(piezas_blancas[pieza_blanca])
                         if piezas_blancas[pieza_blanca] == 'rey':
-                            ganador = 'negras'
+                            ganador = 'Negras'
                         piezas_blancas.pop(pieza_blanca)
                         posiciones_blancas.pop(pieza_blanca)
                     opciones_negras = verificar_opciones(piezas_negras, posiciones_negras, 'black')

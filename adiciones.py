@@ -300,7 +300,7 @@ def dibujar_jaque():
 
 def dibujar_fin_juego():
     pygame.draw.rect(pantalla, 'black', [200, 200, 400, 70])
-    pantalla.blit(fuente.render(f'¡{ganador} ganó el juego!', True, 'white'), (210, 210))
+    pantalla.blit(fuente.render(f'¡{ganador} Ganó el juego!', True, 'white'), (210, 210))
     pantalla.blit(fuente.render(f'¡Presiona ENTER para reiniciar!', True, 'white'), (210, 240))
 
 
@@ -480,7 +480,7 @@ while ejecutar:
             coords_click = (coord_x, coord_y)
             if paso_turno <= 1:
                 if coords_click == (8, 8) or coords_click == (9, 8):
-                    ganador = 'negras'
+                    ganador = 'Negras'
                 if coords_click in posiciones_blancas:
                     seleccion = posiciones_blancas.index(coords_click)
                     # verificar qué pieza está seleccionada, para que solo puedas dibujar movimientos de enroque si se selecciona el rey
@@ -495,7 +495,7 @@ while ejecutar:
                         pieza_negra = posiciones_negras.index(coords_click)
                         piezas_capturadas_blancas.append(piezas_negras[pieza_negra])
                         if piezas_negras[pieza_negra] == 'rey':
-                            ganador = 'blancas'
+                            ganador = 'Blancas'
                         piezas_negras.pop(pieza_negra)
                         posiciones_negras.pop(pieza_negra)
                         negras_movidas.pop(pieza_negra)
@@ -530,7 +530,7 @@ while ejecutar:
                             movimientos_validos = []
             if paso_turno > 1:
                 if coords_click == (8, 8) or coords_click == (9, 8):
-                    ganador = 'blancas'
+                    ganador = 'Blancas'
                 if coords_click in posiciones_negras:
                     seleccion = posiciones_negras.index(coords_click)
                     # verificar qué pieza está seleccionada, para que solo puedas dibujar movimientos de enroque si se selecciona el rey
@@ -545,7 +545,7 @@ while ejecutar:
                         pieza_blanca = posiciones_blancas.index(coords_click)
                         piezas_capturadas_negras.append(piezas_blancas[pieza_blanca])
                         if piezas_blancas[pieza_blanca] == 'rey':
-                            ganador = 'negras'
+                            ganador = 'Negras'
                         piezas_blancas.pop(pieza_blanca)
                         posiciones_blancas.pop(pieza_blanca)
                         blancas_movidas.pop(pieza_blanca)
