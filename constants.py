@@ -10,6 +10,9 @@ fuente_mediana = pygame.font.Font('freesansbold.ttf', 40)
 fuente_grande = pygame.font.Font('freesansbold.ttf', 50)
 temporizador = pygame.time.Clock()
 fps = 60
+
+
+
 # variables del juego e imágenes
 piezas_blancas = ['torre', 'caballo', 'alfil', 'rey', 'reina', 'alfil', 'caballo', 'torre',
                 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon', 'peon']
@@ -21,11 +24,17 @@ posiciones_negras = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7,
                     (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
 piezas_capturadas_blancas = []
 piezas_capturadas_negras = []
+
 # 0 - turno blancas sin selección: 1-turno blancas con pieza seleccionada: 2- turno negras sin selección, 3 - turno negras con pieza seleccionada
 paso_turno = 0
 seleccion = 100
 movimientos_validos = []
+
+
 # cargar imágenes de piezas (reina, rey, torre, alfil, caballo, peón) x 2
+
+
+
 reina_negra = pygame.image.load('assets/images/black queen.png')
 reina_negra = pygame.transform.scale(reina_negra, (80, 80))
 reina_negra_pequena = pygame.transform.scale(reina_negra, (45, 45))
@@ -76,6 +85,8 @@ negras_movidas = [False, False, False, False, False, False, False, False,
                 False, False, False, False, False, False, False, False]
 lista_piezas = ['peon', 'reina', 'rey', 'caballo', 'torre', 'alfil']
 # variables de jaque/contador de parpadeo
+
+
 contador = 0
 ganador = ''
 juego_terminado = False

@@ -29,7 +29,11 @@ piezas_capturadas_negras = []
 paso_turno = 0
 seleccion = 100
 movimientos_validos = []
-# cargar imágenes de piezas (reina, rey, torre, alfil, caballo, peón) x 2
+
+
+# cargar imágenes de piezas (reina, rey, torre, alfil, caballo, peón)
+
+
 reina_negra = pygame.image.load('assets/images/black queen.png')
 reina_negra = pygame.transform.scale(reina_negra, (80, 80))
 reina_negra_pequena = pygame.transform.scale(reina_negra, (45, 45))
@@ -73,6 +77,8 @@ imagenes_negras = [peon_negro, reina_negra, rey_negro, caballo_negro, torre_negr
 imagenes_negras_pequenas = [peon_negro_pequeno, reina_negra_pequena, rey_negro_pequeno, caballo_negro_pequeno,
                         torre_negra_pequena, alfil_negro_pequeno]
 lista_piezas = ['peon', 'reina', 'rey', 'caballo', 'torre', 'alfil']
+
+
 # variables de jaque/contador de parpadeo
 contador = 0
 ganador = ''

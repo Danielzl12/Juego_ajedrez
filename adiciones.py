@@ -1,7 +1,3 @@
-
-
-
-import pygame
 from constants import *
 
 pygame.init()
@@ -304,7 +300,7 @@ def dibujar_fin_juego():
     pantalla.blit(fuente.render(f'¡Presiona ENTER para reiniciar!', True, 'white'), (210, 240))
 
 
-# verificar al paso porque la gente en internet no dejará de molestarme por ello
+# verificar al paso
 def verificar_ep(coords_antiguas, coords_nuevas):
     if paso_turno <= 1:
         indice = posiciones_blancas.index(coords_antiguas)
